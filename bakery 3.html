@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Velvet Crumbs | Custom Cakes in Trivandrum</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Velvet Crumbs - Premium custom cakes, cupcakes, and wedding cakes in Trivandrum, Kerala. Freshly baked, beautifully designed, delivered with love.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-body: #fff9f7;
+      --bg-soft: #fff3f6;
+      --bg-card: #ffffff;
+      --accent-pink: #f4b6c2;
+      --accent-rose: #f7cdd1;
+      --accent-nude: #f2e2d5;
+      --accent-dark: #5d4a4a;
+      --accent-muted: #9d8585;
+      --border-soft: #f1dcdc;
+      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.06);
+      --radius-lg: 22px;
+      --radius-md: 18px;
+      --radius-pill: 999px;
+      --transition-fast: 0.25s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #ffeef5 0, #fff9f7 40%, #fff 100%);
+      color: var(--accent-dark);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1.4rem;
+    }
+
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to bottom, rgba(255, 249, 247, 0.9), rgba(255, 249, 247, 0.85));
+      border-bottom: 1px solid rgba(244, 182, 194, 0.24);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 0.2rem;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #ffeef5, #f4b6c2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      font-size: 1.25rem;
+      box-shadow: 0 10px 24px rgba(244, 182, 194, 0.55);
+    }
+
+    .brand-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .brand-text p {
+      font-size: 0.72rem;
+      color: var(--accent-muted);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .header-link {
+      display: none;
+      font-size: 0.9rem;
+      color: var(--accent-muted);
+      padding: 0.4rem 0.7rem;
+      border-radius: 999px;
+      transition: background var(--transition-fast), color var(--transition-fast);
+    }
+
+    .header-link:hover {
+      background: rgba(255, 255, 255, 0.8);
+      color: var(--accent-dark);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.65rem 1.4rem;
+      border-radius: var(--radius-pill);
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(135deg, #f4b6c2, #f7cdd1);
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 500;
+      box-shadow: 0 12px 25px rgba(244, 182, 194, 0.55);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 34px rgba(244, 182, 194, 0.65);
+      filter: brightness(1.03);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+      box-shadow: 0 10px 20px rgba(244, 182, 194, 0.45);
+    }
+
+    .btn-secondary-link {
+      font-size: 0.9rem;
+      color: var(--accent-muted);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .btn-secondary-link:hover {
+      color: var(--accent-dark);
+    }
+
+    .icon {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 2.4rem 0 3.2rem;
+    }
+
+    .hero-inner {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .hero-text {
+      width: 100%;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(244, 182, 194, 0.45);
+      font-size: 0.74rem;
+      color: var(--accent-muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #f4b6c2, #f7cdd1);
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.05rem;
+      line-height: 1.18;
+      margin-bottom: 0.7rem;
+      color: #3f2a2a;
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      color: var(--accent-muted);
+      max-width: 26rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .pill {
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(242, 226, 213, 0.8);
+      font-size: 0.8rem;
+      color: var(--accent-muted);
+    }
+
+    .hero-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--accent-muted);
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 1.3rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .hero-meta-item span {
+      font-size: 0.75rem;
+      color: var(--accent-muted);
+    }
+
+    .hero-meta-item strong {
+      font-size: 0.9rem;
+      color: var(--accent-dark);
+    }
+
+    .hero-image-wrapper {
+      width: 100%;
+    }
+
+    .hero-card {
+      position: relative;
+      background: linear-gradient(145deg, #fff, #ffeef5);
+      border-radius: 30px;
+      padding: 0.9rem;
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      border: 1px solid rgba(244, 182, 194, 0.3);
+    }
+
+    .hero-main-image {
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.85);
+    }
+
+    .hero-tag {
+      position: absolute;
+      bottom: 0.85rem;
+      left: 0.85rem;
+      padding: 0.55rem 0.85rem;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.96);
+      font-size: 0.75rem;
+      color: var(--accent-dark);
+      display: inline-flex;
+      flex-direction: column;
+      gap: 0.1rem;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-tag span {
+      font-size: 0.7rem;
+      color: var(--accent-muted);
+    }
+
+    .hero-badge-floating {
+      position: absolute;
+      top: 0.7rem;
+      right: 0.7rem;
+      padding: 0.5rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(244, 182, 194, 0.95);
+      color: #fff;
+      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      box-shadow: 0 12px 25px rgba(244, 182, 194, 0.85);
+    }
+
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #fff;
+      opacity: 0.7;
+    }
+
+    /* Section shared */
+    section {
+      padding: 2.8rem 0;
+    }
+
+    .section-header {
+      margin-bottom: 1.6rem;
+    }
+
+    .section-kicker {
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent-muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
+      color: #3f2a2a;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--accent-muted);
+      max-width: 28rem;
+    }
+
+    /* About */
+    .about-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr);
+      gap: 1.6rem;
+      align-items: center;
+    }
+
+    .about-image-card {
+      background: linear-gradient(135deg, #fff, #fff3f6);
+      border-radius: var(--radius-lg);
+      padding: 0.7rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(241, 220, 220, 0.9);
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .about-image-inner {
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .about-text {
+      font-size: 0.94rem;
+      color: var(--accent-muted);
+      margin-bottom: 1rem;
+    }
+
+    .about-features {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.6rem;
+    }
+
+    .about-feature {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.6rem 0.7rem;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(242, 226, 213, 0.8);
+      font-size: 0.85rem;
+      color: var(--accent-dark);
+    }
+
+    .about-feature-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #f4b6c2, #f2e2d5);
+    }
+
+    /* Menu */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .menu-card {
+      background: linear-gradient(135deg, #fffdfc, #fff3f6);
+      border-radius: var(--radius-md);
+      padding: 1.1rem 1rem;
+      border: 1px solid rgba(241, 220, 220, 0.95);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.04);
+      position: relative;
+      overflow: hidden;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+    }
+
+    .menu-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(244, 182, 194, 0.26), transparent 55%);
+      opacity: 0;
+      transition: opacity var(--transition-fast);
+      pointer-events: none;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 22px 40px rgba(0, 0, 0, 0.06);
+      border-color: rgba(244, 182, 194, 0.8);
+    }
+
+    .menu-card:hover::before {
+      opacity: 1;
+    }
+
+    .menu-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .menu-price {
+      font-size: 0.9rem;
+      color: var(--accent-dark);
+      margin-bottom: 0.2rem;
+    }
+
+    .menu-note {
+      font-size: 0.8rem;
+      color: var(--accent-muted);
+    }
+
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.6rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: zoom-in;
+      isolation: isolate;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.28));
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      pointer-events: none;
+    }
+
+    .gallery-item span {
+      position: absolute;
+      left: 0.65rem;
+      bottom: 0.5rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #fff;
+      opacity: 0;
+      transform: translateY(4px);
+      transition: opacity 0.24s ease, transform 0.24s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-item:hover::after,
+    .gallery-item:hover span {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Testimonials */
+    .testimonials-wrapper {
+      background: linear-gradient(135deg, #fff8f6, #ffeef5);
+      border-radius: var(--radius-lg);
+      padding: 1.6rem 1.3rem;
+      border: 1px solid rgba(244, 182, 194, 0.6);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .testimonial-carousel {
+      position: relative;
+      min-height: 130px;
+    }
+
+    .testimonial-slide {
+      opacity: 0;
+      transform: translateX(10px);
+      transition: opacity 0.35s ease, transform 0.35s ease;
+      position: absolute;
+      inset: 0;
+    }
+
+    .testimonial-slide.active {
+      opacity: 1;
+      transform: translateX(0);
+      position: relative;
+    }
+
+    .testimonial-quote {
+      font-size: 0.92rem;
+      color: var(--accent-dark);
+      margin-bottom: 0.6rem;
+    }
+
+    .testimonial-name {
+      font-size: 0.85rem;
+      color: var(--accent-muted);
+      font-weight: 500;
+    }
+
+    .testimonial-dots {
+      display: flex;
+      gap: 0.25rem;
+      margin-top: 0.8rem;
+    }
+
+    .testimonial-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: rgba(244, 182, 194, 0.5);
+      cursor: pointer;
+      transition: background 0.2s ease, width 0.2s ease;
+    }
+
+    .testimonial-dot.active {
+      width: 16px;
+      background: #f4b6c2;
+    }
+
+    .testimonial-nav {
+      position: absolute;
+      top: 1.1rem;
+      right: 1.1rem;
+      display: flex;
+      gap: 0.4rem;
+    }
+
+    .testimonial-nav button {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      border: none;
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--accent-muted);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 0.9rem;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+      transition: background 0.18s ease, transform 0.18s ease;
+    }
+
+    .testimonial-nav button:hover {
+      background: #fff;
+      transform: translateY(-1px);
+    }
+
+    /* Process */
+    .process-steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.9rem;
+    }
+
+    .process-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+      padding: 0.75rem 0.85rem;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid rgba(242, 226, 213, 0.9);
+    }
+
+    .process-number {
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #f4b6c2, #f2e2d5);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .process-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.1rem;
+    }
+
+    .process-text {
+      font-size: 0.82rem;
+      color: var(--accent-muted);
+    }
+
+    /* Contact */
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr);
+      gap: 1.4rem;
+      align-items: flex-start;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, #fff3f6, #fff);
+      border-radius: var(--radius-lg);
+      padding: 1.4rem 1.2rem;
+      border: 1px solid rgba(244, 182, 194, 0.8);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .contact-list {
+      list-style: none;
+      margin: 0.8rem 0 1.3rem;
+      padding: 0;
+      font-size: 0.86rem;
+      color: var(--accent-muted);
+    }
+
+    .contact-list li {
+      margin-bottom: 0.3rem;
+    }
+
+    .contact-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      align-items: center;
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.55rem 1rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(244, 182, 194, 0.7);
+      background: rgba(255, 255, 255, 0.9);
+      font-size: 0.85rem;
+      color: var(--accent-dark);
+      cursor: pointer;
+      transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .btn-ghost:hover {
+      background: #fff;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .map-placeholder {
+      border-radius: var(--radius-md);
+      background: repeating-linear-gradient(
+        45deg,
+        #fff4f7,
+        #fff4f7 8px,
+        #ffe9f0 8px,
+        #ffe9f0 16px
+      );
+      border: 1px dashed rgba(244, 182, 194, 0.9);
+      padding: 1.1rem;
+      font-size: 0.8rem;
+      color: var(--accent-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .map-label {
+      font-weight: 500;
+      color: var(--accent-dark);
+      font-size: 0.86rem;
+    }
+
+    /* Sticky WhatsApp CTA */
+    .whatsapp-fab {
+      position: fixed;
+      left: 0.9rem;
+      right: 0.9rem;
+      bottom: 0.9rem;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+      padding: 0.7rem 1rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #25d366, #1ebe57);
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 500;
+      box-shadow: 0 18px 32px rgba(37, 211, 102, 0.6);
+      text-decoration: none;
+      transition: transform 0.16s ease, box-shadow 0.16s ease, opacity 0.16s ease, visibility 0.16s ease;
+    }
+
+    .whatsapp-fab svg {
+      width: 19px;
+      height: 19px;
+    }
+
+    .whatsapp-fab:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 22px 40px rgba(37, 211, 102, 0.7);
+    }
+
+    .whatsapp-fab:active {
+      transform: translateY(0);
+      box-shadow: 0 14px 26px rgba(37, 211, 102, 0.55);
+    }
+
+    /* Lightbox */
+    .lightbox-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.66);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 60;
+      padding: 1.2rem;
+    }
+
+    .lightbox-overlay.active {
+      display: flex;
+    }
+
+    .lightbox-content {
+      max-width: 760px;
+      width: 100%;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #fff;
+      position: relative;
+      box-shadow: 0 26px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    .lightbox-image-wrapper {
+      max-height: 70vh;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .lightbox-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 0.55rem;
+      right: 0.55rem;
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      border: none;
+      background: rgba(255, 255, 255, 0.92);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1rem;
+      color: var(--accent-dark);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Fade-in on scroll */
+    .fade-in-section {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .fade-in-section.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Footer */
+    footer {
+      padding: 1.6rem 0 2.6rem;
+      font-size: 0.8rem;
+      color: var(--accent-muted);
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (min-width: 640px) {
+      .hero-title {
+        font-size: 2.4rem;
+      }
+
+      .hero-inner {
+        gap: 2.2rem;
+      }
+
+      .menu-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .about-features {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .process-steps {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .contact-wrapper {
+        grid-template-columns: 1.2fr 0.9fr;
+      }
+
+      .whatsapp-fab {
+        max-width: 320px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (min-width: 840px) {
+      .header-link {
+        display: inline-flex;
+      }
+
+      .hero {
+        padding: 3.4rem 0 4rem;
+      }
+
+      .hero-inner {
+        flex-direction: row;
+      }
+
+      .hero-text,
+      .hero-image-wrapper {
+        flex: 1;
+      }
+
+      .hero-meta {
+        gap: 2rem;
+      }
+
+      .about-inner {
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.1fr);
+      }
+
+      .section-title {
+        font-size: 1.7rem;
+      }
+
+      section {
+        padding: 3.1rem 0;
+      }
+
+      .whatsapp-fab {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-mark">V</div>
+        <div class="brand-text">
+          <h1>Velvet Crumbs</h1>
+          <p>Custom Cakes Crafted with Love in Trivandrum</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <a href="#menu" class="header-link">Menu</a>
+        <a href="#gallery" class="header-link">Gallery</a>
+        <a href="https://wa.me/919876543210?text=Hi%20Velvet%20Crumbs%2C%20I%E2%80%99d%20love%20to%20order%20a%20cake." target="_blank" class="btn-primary">
+          <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+            <path fill="currentColor" d="M16.04 4C9.41 4 4 9.26 4 15.76c0 2.51.83 4.82 2.23 6.7L4 28l5.7-2.17A11.8 11.8 0 0 0 16.04 28C22.66 28 28 22.74 28 16.24 28 9.74 22.66 4 16.04 4zm0 20.97c-1.96 0-3.77-.57-5.3-1.56l-.38-.24-3.38 1.29 1.25-3.23-.25-.4A8.57 8.57 0 0 1 7.4 15.8c0-4.66 3.88-8.46 8.64-8.46 4.76 0 8.64 3.8 8.64 8.46 0 4.66-3.88 8.46-8.64 8.46zm4.7-6.32c-.26-.14-1.54-.8-1.78-.89-.24-.09-.42-.14-.6.14-.18.28-.69.88-.85 1.06-.16.18-.31.2-.57.07-.26-.14-1.09-.44-2.08-1.4-.77-.75-1.29-1.68-1.44-1.96-.15-.28-.02-.43.11-.57.12-.12.26-.32.39-.48.13-.16.17-.28.26-.47.09-.19.05-.36-.02-.51-.07-.14-.6-1.44-.83-1.97-.22-.53-.45-.46-.6-.47l-.51-.01c-.17 0-.45.06-.68.29-.23.23-.9.88-.9 2.15 0 1.26.93 2.48 1.06 2.65.13.18 1.83 2.87 4.52 3.91.63.25 1.12.4 1.5.52.63.2 1.2.17 1.65.1.5-.07 1.54-.63 1.76-1.24.22-.6.22-1.12.16-1.24-.06-.11-.23-.18-.49-.31z"/>
+          </svg>
+          Order on WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="hero" class="hero fade-in-section">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <div class="eyebrow">
+            <div class="eyebrow-dot"></div>
+            Premium home-baked cakes in Trivandrum
+          </div>
+          <h2 class="hero-title">Custom Cakes in Trivandrum for Every Celebration</h2>
+          <p class="hero-subtitle">
+            From intimate birthdays to grand weddings, Velvet Crumbs brings you soft, elegant cakes that taste as good as they look — freshly baked and delivered across Trivandrum.
+          </p>
+          <div class="hero-badges">
+            <div class="pill">Eggless options available</div>
+            <div class="pill">48–72 hr pre-order</div>
+            <div class="pill">Handcrafted decor</div>
+          </div>
+          <div class="hero-cta">
+            <a href="https://wa.me/919876543210?text=Hi%20Velvet%20Crumbs%2C%20I%E2%80%99d%20love%20to%20order%20a%20cake." target="_blank" class="btn-primary">
+              <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+                <path fill="currentColor" d="M16.04 4C9.41 4 4 9.26 4 15.76c0 2.51.83 4.82 2.23 6.7L4 28l5.7-2.17A11.8 11.8 0 0 0 16.04 28C22.66 28 28 22.74 28 16.24 28 9.74 22.66 4 16.04 4zm0 20.97c-1.96 0-3.77-.57-5.3-1.56l-.38-.24-3.38 1.29 1.25-3.23-.25-.4A8.57 8.57 0 0 1 7.4 15.8c0-4.66 3.88-8.46 8.64-8.46 4.76 0 8.64 3.8 8.64 8.46 0 4.66-3.88 8.46-8.64 8.46zm4.7-6.32c-.26-.14-1.54-.8-1.78-.89-.24-.09-.42-.14-.6.14-.18.28-.69.88-.85 1.06-.16.18-.31.2-.57.07-.26-.14-1.09-.44-2.08-1.4-.77-.75-1.29-1.68-1.44-1.96-.15-.28-.02-.43.11-.57.12-.12.26-.32.39-.48.13-.16.17-.28.26-.47.09-.19.05-.36-.02-.51-.07-.14-.6-1.44-.83-1.97-.22-.53-.45-.46-.6-.47l-.51-.01c-.17 0-.45.06-.68.29-.23.23-.9.88-.9 2.15 0 1.26.93 2.48 1.06 2.65.13.18 1.83 2.87 4.52 3.91.63.25 1.12.4 1.5.52.63.2 1.2.17 1.65.1.5-.07 1.54-.63 1.76-1.24.22-.6.22-1.12.16-1.24-.06-.11-.23-.18-.49-.31z"/>
+              </svg>
+              Order on WhatsApp
+            </a>
+            <a href="#menu" class="btn-secondary-link">See Menu</a>
+          </div>
+          <p class="hero-note">Share your reference picture, theme & budget — we’ll design a cake that’s uniquely yours.</p>
+          <div class="hero-meta">
+            <div class="hero-meta-item">
+              <span>Location</span>
+              <strong>Trivandrum, Kerala</strong>
+            </div>
+            <div class="hero-meta-item">
+              <span>Delivery</span>
+              <strong>Within city limits</strong>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <div class="hero-card">
+            <div class="hero-main-image">
+              <img src="https://images.unsplash.com/photo-1541976076758-25d2fe9c85a8?auto=format&fit=crop&w=900&q=80" alt="Elegant pastel custom cake from Velvet Crumbs">
+            </div>
+            <div class="hero-tag">
+              Signature Pastel Cake
+              <span>Vanilla sponge · Raspberry cream</span>
+            </div>
+            <div class="hero-badge-floating">
+              <span class="hero-badge-dot"></span>
+              <span>Hand-piped florals</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="fade-in-section">
+      <div class="container about-inner">
+        <div class="about-image-card">
+          <div class="about-image-inner">
+            <img src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?auto=format&fit=crop&w=900&q=80" alt="Assorted pastel cakes and cupcakes">
+          </div>
+        </div>
+        <div>
+          <div class="section-header">
+            <p class="section-kicker">About Velvet Crumbs</p>
+            <h2 class="section-title">Home-baked luxury, crafted in small batches</h2>
+            <p class="section-subtitle">
+              Velvet Crumbs was born from a love for slow baking, delicate details, and the joy of celebrations. Every cake is baked to order from our home kitchen in Trivandrum, using carefully chosen ingredients and hand-finished designs.
+            </p>
+          </div>
+          <p class="about-text">
+            Whether it’s a first birthday, a pastel wedding, or a quiet celebration at home, we work closely with you to bring your ideas to life — from flavours and fillings to colours and textures.
+          </p>
+          <div class="about-features">
+            <div class="about-feature">
+              <div class="about-feature-dot"></div>
+              Fresh, quality ingredients
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-dot"></div>
+              Fully custom designs
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-dot"></div>
+              Reliable, on-time delivery
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="fade-in-section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-kicker">Menu</p>
+          <h2 class="section-title">Signature bakes & custom creations</h2>
+          <p class="section-subtitle">
+            Pricing depends on size, flavour, and design complexity. Share your occasion and guest count on WhatsApp for a custom quote.
+          </p>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-card">
+            <h3 class="menu-title">Birthday Cakes</h3>
+            <p class="menu-price">Starting at ₹1,200</p>
+            <p class="menu-note">
+              Classic favourites like vanilla, chocolate, red velvet & butterscotch. Available in simple, semi-naked or pastel designs.
+            </p>
+          </div>
+          <div class="menu-card">
+            <h3 class="menu-title">Wedding Cakes</h3>
+            <p class="menu-price">Starting at ₹4,500</p>
+            <p class="menu-note">
+              Elegant tiered cakes with delicate florals, textured buttercream and coordinated wedding palettes.
+            </p>
+          </div>
+          <div class="menu-card">
+            <h3 class="menu-title">Cupcakes</h3>
+            <p class="menu-price">Box of 6 from ₹450</p>
+            <p class="menu-note">
+              Soft, frosted cupcakes in curated flavours — perfect for gifting, dessert tables or office celebrations.
+            </p>
+          </div>
+          <div class="menu-card">
+            <h3 class="menu-title">Custom Theme Cakes</h3>
+            <p class="menu-price">Starting at ₹1,800</p>
+            <p class="menu-note">
+              From cartoon characters to minimal aesthetic themes — share your reference and we’ll recreate it in our signature style.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="fade-in-section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-kicker">Gallery</p>
+          <h2 class="section-title">Soft pastels, clean lines & thoughtful details</h2>
+          <p class="section-subtitle">
+            A glimpse of some Velvet Crumbs creations. Tap to view larger — and feel free to save your favourites for reference.
+          </p>
+        </div>
+        <div class="gallery-grid">
+          <button class="gallery-item" data-large="https://images.unsplash.com/photo-1536599018102-9f803c140fc1?auto=format&fit=crop&w=1200&q=80" aria-label="Open image: Floral pastel cake">
+            <img src="https://images.unsplash.com/photo-1536599018102-9f803c140fc1?auto=format&fit=crop&w=600&q=80" alt="Pastel floral celebration cake">
+            <span>Floral Anniversary</span>
+          </button>
+          <button class="gallery-item" data-large="https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?auto=format&fit=crop&w=1200&q=80" aria-label="Open image: Chocolate drip cake">
+            <img src="https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?auto=format&fit=crop&w=600&q=80" alt="Chocolate drip birthday cake">
+            <span>Chocolate Drip</span>
+          </button>
+          <button class="gallery-item" data-large="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=1200&q=80" aria-label="Open image: Cupcake box">
+            <img src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=600&q=80" alt="Assorted pastel cupcakes">
+            <span>Assorted Cupcakes</span>
+          </button>
+          <button class="gallery-item" data-large="https://images.unsplash.com/photo-1545243424-0ce743321e11?auto=format&fit=crop&w=1200&q=80" aria-label="Open image: Minimal wedding cake">
+            <img src="https://images.unsplash.com/photo-1545243424-0ce743321e11?auto=format&fit=crop&w=600&q=80" alt="Minimal white wedding cake with florals">
+            <span>Minimal Wedding</span>
+          </button>
+          <button class="gallery-item" data-large="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=1200&q=80" aria-label="Open image: Theme cake">
+            <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=600&q=80" alt="Fun pastel theme cake">
+            <span>Theme Birthday</span>
+          </button>
+          <button class="gallery-item" data-large="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1200&q=80" aria-label="Open image: Rustic cake">
+            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=600&q=80" alt="Rustic semi naked cake with berries">
+            <span>Rustic Dessert</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="fade-in-section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-kicker">Kind words</p>
+          <h2 class="section-title">Loved by families across Trivandrum</h2>
+          <p class="section-subtitle">
+            Most of our orders come from repeat clients and word-of-mouth. Here’s what a few of them had to say.
+          </p>
+        </div>
+        <div class="testimonials-wrapper">
+          <div class="testimonial-nav" aria-hidden="true">
+            <button type="button" id="testimonial-prev" aria-label="Previous testimonial">&#8249;</button>
+            <button type="button" id="testimonial-next" aria-label="Next testimonial">&#8250;</button>
+          </div>
+          <div class="testimonial-carousel" aria-live="polite">
+            <div class="testimonial-slide active">
+              <p class="testimonial-quote">
+                “The cake was beyond beautiful and tasted even better. We ordered a pastel floral cake for my parents’ anniversary and everyone asked where it was from!”
+              </p>
+              <p class="testimonial-name">— Nandana, Kowdiar</p>
+            </div>
+            <div class="testimonial-slide">
+              <p class="testimonial-quote">
+                “Velvet Crumbs has become our go-to for birthdays. Always on time, perfectly moist cakes and the designs look exactly like the reference I send.”
+              </p>
+              <p class="testimonial-name">— Ajesh, Pattom</p>
+            </div>
+            <div class="testimonial-slide">
+              <p class="testimonial-quote">
+                “We wanted a simple, elegant wedding cake in soft colours. She understood our theme instantly and delivered something that fit our decor perfectly.”
+              </p>
+              <p class="testimonial-name">— Divya & Arun, Vazhuthacaud</p>
+            </div>
+          </div>
+          <div class="testimonial-dots" id="testimonial-dots" aria-hidden="true">
+            <button class="testimonial-dot active" data-index="0"></button>
+            <button class="testimonial-dot" data-index="1"></button>
+            <button class="testimonial-dot" data-index="2"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="process" class="fade-in-section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-kicker">How it works</p>
+          <h2 class="section-title">Ordering your dream cake is simple</h2>
+          <p class="section-subtitle">
+            Share your ideas, date, and guest count — we’ll guide you with flavours, sizes and budgets that work best.
+          </p>
+        </div>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="process-number">1</div>
+            <div>
+              <p class="process-title">Select your design</p>
+              <p class="process-text">Save any reference photos, colours or themes you love — even a mood board is perfect.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-number">2</div>
+            <div>
+              <p class="process-title">WhatsApp your details</p>
+              <p class="process-text">Send us your date, occasion, flavour preferences and design ideas on WhatsApp.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-number">3</div>
+            <div>
+              <p class="process-title">Confirm & enjoy</p>
+              <p class="process-text">We’ll share the final quote. Once confirmed, your cake is baked fresh and delivered on time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / Order -->
+    <section id="contact" class="fade-in-section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-kicker">Contact</p>
+          <h2 class="section-title">Ready to plan your cake?</h2>
+          <p class="section-subtitle">
+            For faster responses, please message on WhatsApp with your date, location in Trivandrum and a rough idea of the design.
+          </p>
+        </div>
+        <div class="contact-wrapper">
+          <div class="contact-card">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; margin-bottom: 0.1rem;">Order & Enquiries</h3>
+            <p style="font-size: 0.88rem; color: var(--accent-muted);">Home bakery · Trivandrum, Kerala</p>
+            <ul class="contact-list">
+              <li><strong>WhatsApp:</strong> +91-98765-43210 (9 am – 8 pm)</li>
+              <li><strong>Lead time:</strong> 2–4 days for most cakes, 7+ days for wedding orders</li>
+              <li><strong>Delivery:</strong> Within Trivandrum city limits (pickup available on request)</li>
+            </ul>
+            <div class="contact-cta">
+              <a href="https://wa.me/919876543210?text=Hi%20Velvet%20Crumbs%2C%20I%E2%80%99d%20love%20to%20order%20a%20cake." target="_blank" class="btn-primary" style="width: 100%; justify-content: center;">
+                <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+                  <path fill="currentColor" d="M16.04 4C9.41 4 4 9.26 4 15.76c0 2.51.83 4.82 2.23 6.7L4 28l5.7-2.17A11.8 11.8 0 0 0 16.04 28C22.66 28 28 22.74 28 16.24 28 9.74 22.66 4 16.04 4zm0 20.97c-1.96 0-3.77-.57-5.3-1.56l-.38-.24-3.38 1.29 1.25-3.23-.25-.4A8.57 8.57 0 0 1 7.4 15.8c0-4.66 3.88-8.46 8.64-8.46 4.76 0 8.64 3.8 8.64 8.46 0 4.66-3.88 8.46-8.64 8.46zm4.7-6.32c-.26-.14-1.54-.8-1.78-.89-.24-.09-.42-.14-.6.14-.18.28-.69.88-.85 1.06-.16.18-.31.2-.57.07-.26-.14-1.09-.44-2.08-1.4-.77-.75-1.29-1.68-1.44-1.96-.15-.28-.02-.43.11-.57.12-.12.26-.32.39-.48.13-.16.17-.28.26-.47.09-.19.05-.36-.02-.51-.07-.14-.6-1.44-.83-1.97-.22-.53-.45-.46-.6-.47l-.51-.01c-.17 0-.45.06-.68.29-.23.23-.9.88-.9 2.15 0 1.26.93 2.48 1.06 2.65.13.18 1.83 2.87 4.52 3.91.63.25 1.12.4 1.5.52.63.2 1.2.17 1.65.1.5-.07 1.54-.63 1.76-1.24.22-.6.22-1.12.16-1.24-.06-.11-.23-.18-.49-.31z"/>
+                </svg>
+                Order Now on WhatsApp
+              </a>
+              <a href="https://instagram.com" target="_blank" class="btn-ghost" aria-label="Visit Velvet Crumbs on Instagram">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" d="M12 7.3A4.7 4.7 0 1 0 16.7 12 4.71 4.71 0 0 0 12 7.3Zm0 7.7A3 3 0 1 1 15 12a3 3 0 0 1-3 3Zm4.9-7.9a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1ZM21 8.1a7.9 7.9 0 0 0-.5-2.7 4.71 4.71 0 0 0-2.7-2.7A7.9 7.9 0 0 0 15.1 2h-6.2a7.9 7.9 0 0 0-2.7.5 4.71 4.71 0 0 0-2.7 2.7A7.9 7.9 0 0 0 2 8.9v6.2a7.9 7.9 0 0 0 .5 2.7 4.71 4.71 0 0 0 2.7 2.7 7.9 7.9 0 0 0 2.7.5h6.2a7.9 7.9 0 0 0 2.7-.5 4.71 4.71 0 0 0 2.7-2.7 7.9 7.9 0 0 0 .5-2.7V8.9ZM19.3 15a5.32 5.32 0 0 1-.3 1.8 3 3 0 0 1-1.7 1.7 5.32 5.32 0 0 1-1.8.3h-6a5.32 5.32 0 0 1-1.8-.3 3 3 0 0 1-1.7-1.7 5.32 5.32 0 0 1-.3-1.8v-6a5.32 5.32 0 0 1 .3-1.8 3 3 0 0 1 1.7-1.7 5.32 5.32 0 0 1 1.8-.3h6a5.32 5.32 0 0 1 1.8.3 3 3 0 0 1 1.7 1.7 5.32 5.32 0 0 1 .3 1.8Z"/>
+                </svg>
+                Instagram
+              </a>
+            </div>
+          </div>
+          <div class="map-placeholder">
+            <span class="map-label">Serving Trivandrum</span>
+            <span>Based in Trivandrum city · Home bakery location shared after order confirmation.</span>
+            <span style="opacity:0.8;">Delivery available across key areas like Kowdiar, Pattom, Ulloor, Vazhuthacaud & more.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox overlay -->
+  <div class="lightbox-overlay" id="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close image">&times;</button>
+      <div class="lightbox-image-wrapper">
+        <img src="" alt="Enlarged cake image" id="lightbox-img">
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky WhatsApp CTA (mobile) -->
+  <a href="https://wa.me/919876543210?text=Hi%20Velvet%20Crumbs%2C%20I%E2%80%99d%20love%20to%20order%20a%20cake." target="_blank" class="whatsapp-fab">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path fill="#fff" d="M16.04 4C9.41 4 4 9.26 4 15.76c0 2.51.83 4.82 2.23 6.7L4 28l5.7-2.17A11.8 11.8 0 0 0 16.04 28C22.66 28 28 22.74 28 16.24 28 9.74 22.66 4 16.04 4zm0 20.97c-1.96 0-3.77-.57-5.3-1.56l-.38-.24-3.38 1.29 1.25-3.23-.25-.4A8.57 8.57 0 0 1 7.4 15.8c0-4.66 3.88-8.46 8.64-8.46 4.76 0 8.64 3.8 8.64 8.46 0 4.66-3.88 8.46-8.64 8.46zm4.7-6.32c-.26-.14-1.54-.8-1.78-.89-.24-.09-.42-.14-.6.14-.18.28-.69.88-.85 1.06-.16.18-.31.2-.57.07-.26-.14-1.09-.44-2.08-1.4-.77-.75-1.29-1.68-1.44-1.96-.15-.28-.02-.43.11-.57.12-.12.26-.32.39-.48.13-.16.17-.28.26-.47.09-.19.05-.36-.02-.51-.07-.14-.6-1.44-.83-1.97-.22-.53-.45-.46-.6-.47l-.51-.01c-.17 0-.45.06-.68.29-.23.23-.9.88-.9 2.15 0 1.26.93 2.48 1.06 2.65.13.18 1.83 2.87 4.52 3.91.63.25 1.12.4 1.5.52.63.2 1.2.17 1.65.1.5-.07 1.54-.63 1.76-1.24.22-.6.22-1.12.16-1.24-.06-.11-.23-.18-.49-.31z"/>
+    </svg>
+    Order on WhatsApp
+  </a>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Velvet Crumbs · Home bakery in Trivandrum, Kerala · All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Fade-in on scroll
+    (function() {
+      const sections = document.querySelectorAll('.fade-in-section');
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+      sections.forEach(sec => observer.observe(sec));
+    })();
+
+    // Gallery lightbox
+    (function() {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxClose = document.getElementById('lightbox-close');
+      const galleryItems = document.querySelectorAll('.gallery-item');
+
+      function openLightbox(src) {
+        lightboxImg.src = src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        lightboxImg.src = '';
+        document.body.style.overflow = '';
+      }
+
+      galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+          const large = item.getAttribute('data-large');
+          if (large) openLightbox(large);
+        });
+      });
+
+      lightboxClose.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', e => {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+      });
+    })();
+
+    // Testimonials carousel
+    (function() {
+      const slides = document.querySelectorAll('.testimonial-slide');
+      const dots = document.querySelectorAll('.testimonial-dot');
+      const prevBtn = document.getElementById('testimonial-prev');
+      const nextBtn = document.getElementById('testimonial-next');
+      let current = 0;
+      let timer;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === index);
+        });
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === index);
+        });
+        current = index;
+      }
+
+      function nextSlide() {
+        const next = (current + 1) % slides.length;
+        showSlide(next);
+      }
+
+      function prevSlide() {
+        const prev = (current - 1 + slides.length) % slides.length;
+        showSlide(prev);
+      }
+
+      function startAuto() {
+        timer = setInterval(nextSlide, 6500);
+      }
+
+      function resetAuto() {
+        clearInterval(timer);
+        startAuto();
+      }
+
+      if (slides.length) {
+        startAuto();
+
+        nextBtn.addEventListener('click', () => {
+          nextSlide();
+          resetAuto();
+        });
+        prevBtn.addEventListener('click', () => {
+          prevSlide();
+          resetAuto();
+        });
+        dots.forEach(dot => {
+          dot.addEventListener('click', () => {
+            const idx = parseInt(dot.getAttribute('data-index'), 10);
+            showSlide(idx);
+            resetAuto();
+          });
+        });
+      }
+    })();
+
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
